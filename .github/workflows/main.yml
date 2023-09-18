@@ -13,7 +13,7 @@ jobs:
 
     strategy:
       matrix:
-        node-version: [16.x]
+        node-version: [18.x]
 
     env:
       CYPRESS_BASE_URL: ${{ secrets.CYPRESS_BASE_URL }}
@@ -53,7 +53,14 @@ jobs:
 
     steps:
       - name: Build
-        run: npm i && npm run build
+      - uses: actions/setup-node@v3
+        with:
+          node-version: ${{ matrix.node-version }}
+          cache: "npm"
+
+      - name: Install dependencies
+        run: npm ci
+  
       - name: Deploy
         id: swa
         uses: azure/static-web-apps-deploy@latest
