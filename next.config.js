@@ -1,13 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
-  // experimental: {
-  //   newNextLinkBehavior: true,
-  //   scrollRestoration: true,
-  //   images: {
-  //     allowFutureImage: true,
-  //   },
-  // },
+  output: 'standalone',
   typescript: {
     tsconfigPath: './tsconfig.json',
   },
