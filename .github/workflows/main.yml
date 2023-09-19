@@ -62,12 +62,9 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      - name: Build
-        run: npm run build
+      - name: Build and copy necessary static files to standalone directory
+        run: npm run deploy
 
-      - name: Move static to standalone directory
-        run: mv .next/static/ .next/standalone/.next/
-  
       - name: Deploy
         id: swa
         uses: azure/static-web-apps-deploy@latest
