@@ -64,6 +64,9 @@ jobs:
 
       - name: Build
         run: npm run build
+
+      - name: Move static to standalone directory
+        run: mv .next/static/ .next/standalone/.next/
   
       - name: Deploy
         id: swa
