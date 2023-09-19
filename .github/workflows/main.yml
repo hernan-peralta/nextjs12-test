@@ -75,6 +75,6 @@ jobs:
           app_build_command: npm run deploy
           app_location: "/"
           api_location: ""
-          output_location: ".next/standalone/.next/server/pages"
+          output_location: ""
         env:
           IS_STATIC_EXPORT: true
