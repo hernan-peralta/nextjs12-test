@@ -7,7 +7,7 @@
     "build": "next build",
     "start:prod": "next start",
     "start:dev": "next dev",
-    "deploy": "next build && cp -r .next/static .next/standalone/.next/ && cp -r public .next/standalone/",
+    "deploy": "next build && cp -r .next/static .next/standalone/_next/ && cp -r public .next/standalone/",
     "lint": "next lint",
     "format": "prettier --write \"src/**/*.{js,jsx,ts,tsx}\" \"cypress/**/*.{js,jsx,ts,tsx}\" \"**/*.config.{js,ts}\" \"**/*.d.ts\" \"**/*.json\"",
     "cy:open": "cypress open",
