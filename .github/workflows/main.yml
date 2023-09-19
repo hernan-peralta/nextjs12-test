@@ -78,3 +78,5 @@ jobs:
           app_location: "/"
           api_location: ""
           output_location: ".next/standalone/.next/server/pages"
+        env:
+          IS_STATIC_EXPORT: true
